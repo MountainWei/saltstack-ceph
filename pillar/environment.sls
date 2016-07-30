@@ -1,14 +1,14 @@
 nodes:
-  minion1:
+  admin:
     roles:
       - ceph-deploy
-  minion2:
+  mon1:
     roles:
       - ceph-mon
-  minion3:
+  osd0:
     roles:
       - ceph-osd
-  minion4:
+  osd1:
     roles:
       - ceph-osd
 

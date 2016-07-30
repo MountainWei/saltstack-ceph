@@ -1,10 +1,10 @@
 ceph:
-  version: jewel
-  cluster_name: ceph_wei
+  version: infernalis
+  cluster_name: ceph_porridge
   global:
     fsid: 73278717-c98b-4ae5-b21a-6c49e53db7a8
-    mon_initial_members: minion2
-    mon_host: 192.168.86.202
+    mon_initial_members: mon1
+    mon_host: 10.1.11.12
     auth_cluster_required: cephx
     auth_service_required: cephx
     auth_client_required: cephx
@@ -12,11 +12,11 @@ ceph:
   mon:
     interface: eth0
   osd_location:
-    minion3: /var/local/osd0/
-    minion4: /var/local/osd1/
+    osd0: /var/local/osd0/
+    osd1: /var/local/osd1/
   cluster:
     monitor:
-      - minion2
+      - mon1
     osd:
-      - minion3
-      - minion4
+      - osd0
+      - osd1

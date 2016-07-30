@@ -2,6 +2,7 @@
 {% set ip = salt['network.ip_addrs'](conf.mon_interface)[0] -%}
 {% set mon_hosts = conf.monitors|join(' ') %}
 {% set osd_hosts = conf.osds|join(' ') %}
+{% set version = salt['pillar.get']('ceph:version') %}
 
 include:
   - .ceph
@@ -34,7 +35,7 @@ create cluster:
   cmd.run:
     - name: /usr/bin/ceph-deploy new {{conf.monitors[0]}}
     - cwd: /home/{{conf.ceph_user}}/{{conf.cluster}}/
-    - user: saltstack
+    - user: {{conf.ceph_user}}
     - require:
       - file: create mycluster directory
 
@@ -51,14 +52,14 @@ reload ceph config file:
 
 install ceph:
   cmd.run:
-    - name: ceph-deploy install {{conf.host}} {{mon_hosts}} {{osd_hosts}} 
+    - name: ceph-deploy install --release {{version}} {{conf.host}} {{mon_hosts}} {{osd_hosts}} 
     - cwd: /home/{{conf.ceph_user}}/{{conf.cluster}}/
     - user: {{conf.ceph_user}}
 
 gather keys:
   cmd.run:
     - name: ceph-deploy mon create-initial
-    - user: saltstack
+    - user: {{conf.ceph_user}}
     - cwd: /home/{{conf.ceph_user}}/{{conf.cluster}}/
 
 {% for osd in conf.osds %}

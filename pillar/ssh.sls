@@ -1,8 +1,8 @@
 ssh:
   config_ssh: yes
-  ceph_user: saltstack
-  password: liuwei1992
+  ceph_user: aruan
+  password: 4iXVD9BRieuSHAU8g41O
   ssh_hosts:
-    - minion2
-    - minion3
-    - minion4
+    - mon1
+    - osd0
+    - osd1
