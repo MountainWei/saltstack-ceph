@@ -1,0 +1,277 @@
+minion1:
+----------
+          ID: copy release file
+    Function: file.recurse
+        Name: /home/saltstack/release
+      Result: True
+     Comment: Recursively updated /home/saltstack/release
+     Started: 
+    Duration: 
+     Changes:   
+              ----------
+              /home/saltstack/release/conf:
+                  ----------
+                  /home/saltstack/release/conf:
+                      New Dir
+              /home/saltstack/release/conf/octa.conf:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/copy_jar.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy:
+                  ----------
+                  /home/saltstack/release/deploy:
+                      New Dir
+              /home/saltstack/release/deploy/.install_oat_server.sh.swp:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/.install_pca.sh.swp:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/deploy-all.py:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/deploy-zeromq.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/deploy_ubuntu_pca.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/deploy_ubuntu_server.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/install_client.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/install_oat_server.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/deploy/install_pca.sh:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-client:
+                  ----------
+                  /home/saltstack/release/oat-client:
+                      New Dir
+              /home/saltstack/release/oat-client/TrustAgentLinuxInstaller-2.2.bin:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server:
+                  ----------
+                  /home/saltstack/release/oat-server:
+                      New Dir
+              /home/saltstack/release/oat-server/AttestationService-2.2-core.war:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server/TrustDashBoard-2.2-core.war:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server/WLMService-2.2-core.war:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server/WhiteListPortal-2.2-core.war:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server/aikqverify-2.2.zip:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/oat-server/database:
+                  ----------
+                  /home/saltstack/release/oat-server/database:
+                      New Dir
+              /home/saltstack/release/oat-server/database/mtwilson.sql:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/privacy-ca:
+                  ----------
+                  /home/saltstack/release/privacy-ca:
+                      New Dir
+              /home/saltstack/release/privacy-ca/HisPrivacyCAWebServices2-2.2-setup.jar:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+              /home/saltstack/release/privacy-ca/HisPrivacyCAWebServices2.war:
+                  ----------
+                  diff:
+                      New file
+                  group:
+                      saltstack
+                  mode:
+                      755
+                  user:
+                      saltstack
+----------
+          ID: copy jdk1.7
+    Function: file.recurse
+        Name: /home/saltstack/jdk1.7.0_79
+      Result: True
+     Comment: The directory /home/saltstack/jdk1.7.0_79 is in the correct state
+     Started: 
+    Duration: 
+     Changes:   
+----------
+          ID: config jdk1.7
+    Function: file.append
+        Name: /etc/profile
+      Result: True
+     Comment: Appended 0 lines
+     Started: 
+    Duration: 
+     Changes:   
+----------
+          ID: Run onlyif jdk environment changes
+    Function: cmd.wait
+        Name: source /etc/profile
+      Result: True
+     Comment: 
+     Started: 
+    Duration: 
+     Changes:   
+----------
+          ID: install requirement packages
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed.
+     Started: 
+    Duration: 
+     Changes:   
+
+Summary
+------------
+Succeeded: 5 (changed=1)
+Failed:    0
+------------
+Total states run:     5

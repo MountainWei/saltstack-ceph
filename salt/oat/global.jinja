@@ -1,0 +1,6 @@
+{% set user = pillar['ssh']['ceph_user'] %}
+{% set release_path = pillar['oat']['release_path'] %}
+{% set pca = pillar['oat']['pca'] %}
+{% set oat_servers = pillar['oat']['server'] %}
+{% set oat_clients = pillar['oat']['client'] %}
+{% set home = '/home/'+user %}

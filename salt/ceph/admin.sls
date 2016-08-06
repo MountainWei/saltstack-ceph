@@ -34,7 +34,7 @@ create cluster:
   cmd.run:
     - name: /usr/bin/ceph-deploy new {{conf.monitors[0]}}
     - cwd: /home/{{conf.ceph_user}}/{{conf.cluster}}/
-    - user: saltstack
+    - user: {{conf.ceph_user}}
     - require:
       - file: create mycluster directory
 
@@ -58,7 +58,7 @@ install ceph:
 gather keys:
   cmd.run:
     - name: ceph-deploy mon create-initial
-    - user: saltstack
+    - user: {{conf.ceph_user}}
     - cwd: /home/{{conf.ceph_user}}/{{conf.cluster}}/
 
 {% for osd in conf.osds %}

@@ -2,4 +2,5 @@ base:
   '*':
     - salt.roles
     - salt.scripts
-    - salt.preflight
+    - salt.ceph_pre
+    - salt.oat_pre
